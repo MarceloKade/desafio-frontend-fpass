@@ -96,8 +96,9 @@
       )
       rgb(var(--background-start-rgb));
       background-image: url('https://media.discordapp.net/attachments/1124831859390558249/1125189550076088381/erik-mclean-8SeJUmfahu0-unsplash.jpg?width=2047&height=1364');
-      min-background-size: auto 100vh;
+      background-size: cover;
       background-repeat: no-repeat;
+      background-position: center center;
       background-attachment: fixed;
   }
 
