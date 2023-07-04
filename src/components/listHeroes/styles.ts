@@ -83,3 +83,37 @@ export const Name = styled.figcaption`
     -0.8px -0.9px 0px rgba(0, 0, 0, 0.8),
     -0.8px 0.9px 0px rgba(0, 0, 0, 0.8);
 `;
+
+export const ButtonContainer = styled.div`
+    width: 100vh;
+    margin-top: 40px;
+    position: relative;
+`;
+
+export const ButtonNext = styled.div`
+    right: 0;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: darkgray;
+    }
+`;
+
+export const ButtonBack = styled.div`
+    left: 0;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: darkgray;
+    }
+`;
