@@ -8,10 +8,12 @@ import Link from "next/link";
 
 export default function Main() {
     const [heroes, setHeroes] = useState<Hero[]>([]);
+    const [offset, setOffset] = useState(0);
 
-    const fetchHeroes = async () => {
+    const fetchHeroes = async (offset: number) => {
         try {
-            const result = await searchHeroes();
+            const limit = window.innerWidth <= 800 ? 20 : 21;
+            const result = await searchHeroes(limit, offset);
             setHeroes(result);
         } catch (error) {
             console.log('Erro ao buscar dados dos heróis', error);
@@ -19,20 +21,34 @@ export default function Main() {
     };
 
     useEffect(() => {
-        fetchHeroes();
-    }, []);
+        fetchHeroes(offset);
+    }, [offset]);
+
+    const handleClickNext = () => {
+        setOffset((prevOffset) => prevOffset + 20);
+    };
+
+    const handleClickBack = () => {
+        if (offset > 0) {
+            setOffset((prevOffset) => prevOffset - 20);
+        }
+    };
 
     return (
         <>
             <M.MainContainer>
                 {heroes.map(({ id, name, thumbnail }) => (
                     <div key={id}>
-                        <Link href={`/description/${id}`} >
+                        <Link href={`/description/${id}`}>
                             <Heroes name={name} thumbnail={thumbnail} />
                         </Link>
                     </div>
                 ))}
             </M.MainContainer>
+            <M.ButtonContainer>
+                <M.ButtonNext onClick={handleClickNext}>Next page &gt;</M.ButtonNext>
+                <M.ButtonBack onClick={handleClickBack}>&lt; Back page </M.ButtonBack>
+            </M.ButtonContainer>
         </>
     );
 }

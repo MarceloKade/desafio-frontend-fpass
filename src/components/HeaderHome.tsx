@@ -7,15 +7,13 @@ export default function Header() {
         <>
             <nav>
                 <H.Ul>
-                    <H.Container>
-                        <H.Logo><img src="/img/logo.svg" /></H.Logo>
-                        <H.Lista>
-                            <CustomLink
-                                href="/search"
-                                text="Search"
-                            />
-                        </H.Lista>
-                    </H.Container>
+                    <H.Image src="/img/logo.svg" />
+                    <H.Lista>
+                        <CustomLink
+                            href="/search"
+                            text="Search"
+                        />
+                    </H.Lista>
                 </H.Ul>
             </nav >
         </>

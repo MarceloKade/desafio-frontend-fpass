@@ -5,12 +5,7 @@ import { Hero } from '@/interfaces/heroes';
 import * as D from '@/components/descriptionHeroes/styles';
 import Header from '@/components/HeaderDescription';
 import { getImageUrl } from '@/utils/utils';
-
-interface DescriptionHeroProps {
-    params: {
-        id: string;
-    };
-}
+import { DescriptionHeroProps } from '@/components/descriptionHeroes/types';
 
 export default function DescriptionHero({ params }: DescriptionHeroProps) {
     const [hero, setHero] = useState<Hero | null>(null);
@@ -49,11 +44,12 @@ export default function DescriptionHero({ params }: DescriptionHeroProps) {
                 <D.ContainerContent>
                     <D.Name>{hero.name}</D.Name>
                     <D.Description>{hero.description}</D.Description>
-
-                    <D.About>{hero.comics.available} quadrinhos</D.About>
-                    <D.About>{hero.stories.available} histórias</D.About>
-                    <D.About>{hero.events.available} eventos</D.About>
-                    <D.About>{hero.series.available} series</D.About>
+                    <D.ContainerAbout>
+                        <D.About>{hero.comics.available} quadrinhos</D.About>
+                        <D.About>{hero.stories.available} histórias</D.About>
+                        <D.About>{hero.events.available} eventos</D.About>
+                        <D.About>{hero.series.available} series</D.About>
+                    </D.ContainerAbout>
 
                 </D.ContainerContent>
 
