@@ -8,18 +8,18 @@ const privateKey = process.env.NEXT_PUBLIC_PRIVATE_KEY;
 const ts = Date.now().toString();
 const hash = crypto.createHash('md5').update(ts + privateKey + publicKey).digest('hex');
 
-export const searchHeroes = async (): Promise<Hero[]> => {
+export const searchHeroes = async (limit: number, offset: number): Promise<Hero[]> => {
   try {
     const response = await axios.get(`${baseUrl}/characters`, {
       params: {
-        limit: 20,
-        offset: 0,
+        limit: limit,
+        offset: offset,
         apikey: publicKey,
         ts: ts,
         hash: hash,
       },
     });
-    
+
     return response.data.data.results;
   } catch (error) {
     console.error('Erro ao buscar heróis:', error);
