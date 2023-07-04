@@ -19,7 +19,7 @@ export const searchHeroes = async (): Promise<Hero[]> => {
         hash: hash,
       },
     });
-
+    
     return response.data.data.results;
   } catch (error) {
     console.error('Erro ao buscar heróis:', error);
