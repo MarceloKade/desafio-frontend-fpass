@@ -20,7 +20,7 @@ export default function DescriptionHero({ params }: DescriptionHeroProps) {
 
     const getHeroData = async (id: number) => {
         try {
-            const heroData = await searchHeroes();
+            const heroData = await searchHeroes(20, 0);
             const selectedHero = heroData.find((hero: Hero) => hero.id === id);
             setHero(selectedHero || null);
         } catch (error) {
