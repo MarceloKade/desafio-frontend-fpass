@@ -1,4 +1,5 @@
 import './globals.css'
+import StyledComponentsRegistry from '@/registry'
 import { Anton } from 'next/font/google'
 
 const bebas = Anton({ subsets: ['latin'], weight: "400", variable: '--font-bebas' })
@@ -15,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${bebas.className} font-sans`}>{children}</body>
+      <body className={`${bebas.className} font-sans`}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
