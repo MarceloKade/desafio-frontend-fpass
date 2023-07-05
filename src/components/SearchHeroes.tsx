@@ -35,8 +35,8 @@ export default function Search() {
                     title="Search"
                     type="text"
                     value={searchTerm}
-                    onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setSearchTerm(e.target.value)}
-                    onKeyPress={handleKeyPress}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
+                    onKeyDown={handleKeyPress}
                 />
                 <S.ButtonSearch type="button" onClick={handleSearch}>
                     Search
