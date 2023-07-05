@@ -85,14 +85,15 @@ export const Name = styled.figcaption`
 `;
 
 export const ButtonContainer = styled.div`
-    width: 100vh;
+    width: 80vw;
     margin-top: 40px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 `;
 
 export const ButtonNext = styled.div`
     right: 0;
-    position: absolute;
     color: white;
     font-size: 25px;
     font-weight: 300;
@@ -106,7 +107,6 @@ export const ButtonNext = styled.div`
 
 export const ButtonBack = styled.div`
     left: 0;
-    position: absolute;
     color: white;
     font-size: 25px;
     font-weight: 300;

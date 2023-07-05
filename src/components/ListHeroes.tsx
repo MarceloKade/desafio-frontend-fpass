@@ -46,8 +46,8 @@ export default function Main() {
                 ))}
             </M.MainContainer>
             <M.ButtonContainer>
-                <M.ButtonNext onClick={handleClickNext}>Next page &gt;</M.ButtonNext>
                 <M.ButtonBack onClick={handleClickBack}>&lt; Back page </M.ButtonBack>
+                <M.ButtonNext onClick={handleClickNext}>Next page &gt;</M.ButtonNext>
             </M.ButtonContainer>
         </>
     );
