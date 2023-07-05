@@ -1,11 +1,16 @@
-import Header from "@/components/HeaderDescription";
+'use client'
+
+import HeaderDescription from "@/components/HeaderDescription";
 import SearchHeroes from "@/components/SearchHeroes";
 
 export default function Search() {
     return (
-        <>
-            <Header />
-            <SearchHeroes />
+        <><header>
+            <HeaderDescription />
+        </header>
+            <main>
+                <SearchHeroes />
+            </main>
         </>
     );
 }

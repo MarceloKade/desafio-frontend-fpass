@@ -1,11 +1,12 @@
 'use client'
+
 import React, { useState } from 'react';
 import { Hero } from '@/interfaces/heroes';
 import { searchHeroes } from '@/services/api/marvel';
 import { getImageUrl } from '@/utils/utils';
 import * as S from './search/styles';
 
-export default function Search() {
+export default function SearchHeroes() {
     const [searchTerm, setSearchTerm] = useState('');
     const [heroes, setHeroes] = useState<Hero[]>([]);
 

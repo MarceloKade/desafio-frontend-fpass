@@ -1,7 +1,7 @@
+'use client'
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  min-width: 300px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -14,10 +14,8 @@ export const Container = styled.div`
     align-items: center;
 
   }
-  ;
 `;
 export const InputSearch = styled.input`
-  margin-top: 100px;
   border-radius: 10px;
   width: 400px;
   height: 40px;
@@ -35,7 +33,6 @@ export const InputSearch = styled.input`
 `;
 export const ButtonSearch = styled.button`
   font-size: 18px;
-  margin-top: 100px;
   width: 80px;
   height: 40px;
   outline: none;
@@ -89,6 +86,7 @@ export const CardImage = styled.img`
 
     object-fit: cover;
 `;
+
 export const Glow = styled.div`
     position: absolute;
     top: 0;
@@ -100,6 +98,7 @@ export const Glow = styled.div`
     background: radial-gradient(circle at 50% 0%, rgb(184,196,211), transparent);
     
 `;
+
 export const Name = styled.figcaption`
     display:flex;
     flex-direction: column;

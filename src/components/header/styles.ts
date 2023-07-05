@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { styled } from "styled-components";
 
 export const Ul = styled.ul`
@@ -19,7 +20,7 @@ export const Lista = styled.li`
   list-style-type: none;
 `;
 
-export const Links = styled.a`
+export const Links = styled(Link)`
   font-size: 40px;
   transition: color 0.4s;
 

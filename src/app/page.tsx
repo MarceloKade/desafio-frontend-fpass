@@ -1,4 +1,4 @@
-import Header from "@/components/HeaderHome";
+import HeaderHome from "@/components/HeaderHome";
 import Main from "@/components/ListHeroes";
 
 
@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <Header />
+        <HeaderHome />
       </header>
       <main>
         <Main />

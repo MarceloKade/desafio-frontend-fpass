@@ -2,7 +2,7 @@
 import * as H from './header/styles';
 import CustomLink from './header/CustomLink';
 
-export default function Header() {
+export default function HeaderHome() {
     return (
         <>
             <nav>
