@@ -1,10 +1,11 @@
 'use client'
 
 import React from 'react';
-import { getImageUrl } from '@/utils/imageNotFound';
 import * as S from './search/styles';
 import { useSearchHeroes } from '@/utils/searchHeroes';
 import Link from "next/link";
+import useCardHover from '@/utils/cardHoverHeroes';
+import Heroes from './listHeroes/Heroes';
 
 export default function SearchHeroes() {
     const {
@@ -15,6 +16,8 @@ export default function SearchHeroes() {
         searchTerm,
         noResultsMessage
     } = useSearchHeroes();
+
+    const { cardRef, handleMouseMove, handleMouseLeave } = useCardHover();
 
     return (
         <>
@@ -35,16 +38,9 @@ export default function SearchHeroes() {
             {(searchTerm === '' || filteredHeroes.length > 0) ? (
                 <>
                     {filteredHeroes.map(({ id, name, thumbnail }) => (
-                        <S.ContainerCard key={id}>
+                        <S.ContainerCard key={id} >
                             <Link href={`/description/${id}`}>
-                                <S.Card>
-                                    <S.CardImage
-                                        src={getImageUrl(thumbnail.path, thumbnail.extension)}
-                                        alt={name}
-                                    />
-                                    <S.Name>{name}</S.Name>
-                                    <S.Glow></S.Glow>
-                                </S.Card>
+                                <Heroes name={name} thumbnail={thumbnail} />
                             </Link>
 
                         </S.ContainerCard>
