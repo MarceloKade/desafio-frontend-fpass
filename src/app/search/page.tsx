@@ -5,9 +5,10 @@ import SearchHeroes from "@/components/SearchHeroes";
 
 export default function Search() {
     return (
-        <><header>
-            <HeaderDescription />
-        </header>
+        <>
+            <header>
+                <HeaderDescription />
+            </header>
             <main>
                 <SearchHeroes />
             </main>

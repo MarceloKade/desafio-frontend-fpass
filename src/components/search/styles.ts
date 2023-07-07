@@ -100,7 +100,7 @@ export const Glow = styled.div`
 `;
 
 export const Name = styled.figcaption`
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
@@ -112,4 +112,14 @@ export const Name = styled.figcaption`
     0.8px -0.9px 0px rgba(0, 0, 0, 0.8),
     -0.8px -0.9px 0px rgba(0, 0, 0, 0.8),
     -0.8px 0.9px 0px rgba(0, 0, 0, 0.8);
+`;
+
+export const NoResultMessage = styled.p`
+    margin-top: 20px;
+    font-size: 20px;
+    text-shadow: 
+    1px 0.9px 0px rgba(0, 0, 0, 0.8), 
+    1px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -1px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -1px 0.9px 0px rgba(0, 0, 0, 0.8);
 `;

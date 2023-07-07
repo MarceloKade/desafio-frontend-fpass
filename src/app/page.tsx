@@ -1,5 +1,5 @@
 import HeaderHome from "@/components/HeaderHome";
-import Main from "@/components/ListHeroes";
+import ListHeroes from "@/components/ListHeroes";
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <HeaderHome />
       </header>
       <main>
-        <Main />
+        <ListHeroes />
       </main>
     </>
 
