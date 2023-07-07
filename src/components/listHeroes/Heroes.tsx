@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import * as M from './styles'
-import { HeroProps } from "./types";
+import { HeroProps } from "../../interfaces/listHeroesTypes";
 import { getImageUrl } from '@/utils/imageNotFound';
 import useCardHover from '@/utils/cardHoverHeroes';
 

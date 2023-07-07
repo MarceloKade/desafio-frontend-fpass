@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import HeaderDescription from '@/components/HeaderDescription';
-import { DescriptionHeroProps } from '@/components/descriptionHeroes/types';
+import { DescriptionHeroProps } from '@/interfaces/descriptionHeroesTypes';
 import { useHeroDescription } from '@/utils/heroDescription';
 import HeroDescription from '@/components/HeroDescription';
 

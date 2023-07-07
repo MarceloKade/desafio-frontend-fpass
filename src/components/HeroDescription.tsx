@@ -1,7 +1,7 @@
 import React from 'react';
 import * as D from '@/components/descriptionHeroes/styles';
 import { getImageUrl } from '@/utils/imageNotFound';
-import { HeroDescriptionProps } from './descriptionHeroes/types';
+import { HeroDescriptionProps } from '../interfaces/descriptionHeroesTypes';
 
 export default function HeroDescription({ hero }: HeroDescriptionProps) {
     return (

@@ -4,6 +4,7 @@ import React from 'react';
 import { getImageUrl } from '@/utils/imageNotFound';
 import * as S from './search/styles';
 import { useSearchHeroes } from '@/utils/searchHeroes';
+import Link from "next/link";
 
 export default function SearchHeroes() {
     const {
@@ -35,14 +36,17 @@ export default function SearchHeroes() {
                 <>
                     {filteredHeroes.map(({ id, name, thumbnail }) => (
                         <S.ContainerCard key={id}>
-                            <S.Card>
-                                <S.CardImage
-                                    src={getImageUrl(thumbnail.path, thumbnail.extension)}
-                                    alt={name}
-                                />
-                                <S.Name>{name}</S.Name>
-                                <S.Glow></S.Glow>
-                            </S.Card>
+                            <Link href={`/description/${id}`}>
+                                <S.Card>
+                                    <S.CardImage
+                                        src={getImageUrl(thumbnail.path, thumbnail.extension)}
+                                        alt={name}
+                                    />
+                                    <S.Name>{name}</S.Name>
+                                    <S.Glow></S.Glow>
+                                </S.Card>
+                            </Link>
+
                         </S.ContainerCard>
                     ))}
                 </>

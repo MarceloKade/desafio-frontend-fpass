@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkProps } from './types';
+import { LinkProps } from '../../interfaces/headerTypes';
 import * as L from './styles';
 
 
