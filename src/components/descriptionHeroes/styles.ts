@@ -84,6 +84,11 @@ export const Name = styled.figcaption`
 export const Description = styled.p`
   font-size: 30px;
   margin-top:40px;
+  text-shadow: 
+    2px 0.9px 0px rgba(0, 0, 0, 0.8), 
+    2px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -2px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -2px 0.9px 0px rgba(0, 0, 0, 0.8);
 
   @media (max-width: 800px){
     margin-top: -40px;
@@ -101,7 +106,7 @@ export const Description = styled.p`
   }
 `;
 
-export const ContainerAbout = styled.p`
+export const ContainerAbout = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top:100px;
@@ -120,6 +125,11 @@ export const ContainerAbout = styled.p`
 `;
 export const About = styled.p`
   font-size: 30px;
+  text-shadow: 
+    2px 0.9px 0px rgba(0, 0, 0, 0.8), 
+    2px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -2px -0.9px 0px rgba(0, 0, 0, 0.8),
+    -2px 0.9px 0px rgba(0, 0, 0, 0.8);
   
 
   @media (max-width: 640px){
