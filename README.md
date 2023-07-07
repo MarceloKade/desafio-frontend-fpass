@@ -22,10 +22,15 @@
 ### Apresentação
 
 - Esse aplicativo é um desafio front-end proposto pela empresa Fpass, com o objetivo de testar as capacidades do candidato.
-- Foi definido as variáveis de amibiente com o .env e consumido a api da marvel com axios.
-- Iniciei a aplicação com a pasta app dentro da src, onde tem os arquivos principais da aplicação.
-- O que se refere a Header, e Main foi separado por pastas, e na estilização, cada componente tem uma letra específica.
-- Cada componente inicia com a letra relacionado a sua função ou localização na página.
+- O projeto foi iniciado com Next.js, React.js, typescript.
+- Foi instalado a dependência de estilização Styled Components 
+- Definido as configurações do Styled Components no arquivo registry.tsx para ingetar automáticamente a estilização nos arquivos html.
+- As tipagens separadas na pasta interfaces e a lógica na pasta utils para facilitar a manutenção.
+- Foi criado pastas para armazenar arquivos de estilização e componentes reutilizáveis.
+- Dentro da pasta app tem o arquivo page.tsx que é a página inicial, a página search para pesquisar pelos personagens e a página description para mostrar a descrição de cada personagem selecionado, seja na página inicial, seja na página de busca.
+- Na página inicial é listado 21 personagens para desktop, e 20 para tablet e mobile
+- Foi criado dois botões na página inicial, o botão para mostrar os próximos 21 ou 20 personagens, e o botão para voltar para os personagens anteriores.
+- Na página de busca, se o campo estiver vazio, irá renderizar todos os personagens, se digitar um nome que não existe, aparecerá uma mensagem avisando que não foi encontrado o personagem, se o nome do heroi pesquisado existir no array, será listado os personagens referente ao valor do input.
 
 ### Objetivo
 
