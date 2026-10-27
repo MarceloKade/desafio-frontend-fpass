@@ -56,7 +56,7 @@ As seguintes tecnologias foram utilizadas neste projeto:
 Para executar o projeto você pode fazer um clone com o commando
 
 ```bash
-git clone git@github.com:MarceloKade/desafio-frontend-fpass.git
+git clone https://github.com/MarceloKade/desafio-frontend-fpass.git
 ```
 
  e no terminal digitar
