@@ -1,53 +1,36 @@
 export interface Hero {
   id: number;
   name: string;
-  description: string;
-  resourceURI: string;
-  urls: [
-    {
-      type: string,
-      url: string
-    }
-  ],
-  thumbnail: {
-    path: string;
-    extension: string;
-  },
-  comics: {
-    available: number;
-    returned: number;
-    collectionURI: string;
-    items: {
-      resourceURI: string;
-      name: string;
-    }[];
-  },
-  stories: {
-    available: number;
-    returned: number;
-    collectionURI: string;
-    items: {
-      resourceURI: string;
-      name: string;
-      type: string;
-    }[];
-  },
-  events: {
-    available: number;
-    returned: number;
-    collectionURI: string;
-    items: {
-      resourceURI: string;
-      name: string;
-    }[];
-  },
-  series: {
-    available: number;
-    returned: number;
-    collectionURI: string;
-    items: {
-      resourceURI: string;
-      name: string;
-    }[];
-  }
+  slug: string;
+  biography: {
+    fullName: string;
+    alterEgos: string;
+    aliases: string[];
+    placeOfBirth: string;
+    firstAppearance: string;
+    publisher: string;
+    alignment: string;
+  };
+  appearance: {
+    gender: string;
+    race: string | null;
+    height: string[];
+    weight: string[];
+    eyeColor: string;
+    hairColor: string;
+  };
+  work: {
+    occupation: string;
+    base: string;
+  };
+  connections: {
+    groupAffiliation: string;
+    relatives: string;
+  };
+  images: {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+  };
 }

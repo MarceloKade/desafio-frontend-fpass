@@ -1,34 +1,47 @@
-import { useState, useEffect } from 'react';
-import { searchHeroes } from '@/services/api/marvel';
-import { Hero } from '@/interfaces/heroes';
+import { useState, useEffect } from "react";
+import { searchHeroes } from "@/services/api/marvel";
+import { Hero } from "@/interfaces/heroes";
 
 export function useHeroDescription(id: number) {
-    const [hero, setHero] = useState<Hero | null>(null);
+  const [hero, setHero] = useState<Hero | null>(null);
 
-    useEffect(() => {
-        const getHeroData = async () => {
-            try {
-                let offset = 0;
-                let selectedHero: Hero | undefined;
+  useEffect(() => {
+    let cancelled = false;
 
-                while (!selectedHero) {
-                    const heroData = await searchHeroes(100, offset);
-                    selectedHero = heroData.find((hero: Hero) => hero.id === id);
-                    offset += 100;
-                }
+    const getHeroData = async () => {
+      try {
+        let offset = 0;
+        let selectedHero: Hero | undefined;
 
-                setHero(selectedHero || null);
-            } catch (error) {
-                console.log('Erro ao buscar dados do herói', error);
-            }
-        };
+        while (!selectedHero) {
+          const heroes = await searchHeroes(100, offset);
 
-        if (typeof id === 'number') {
-            getHeroData();
+          if (heroes.length === 0) {
+            break;
+          }
+
+          selectedHero = heroes.find((item) => item.id === id);
+          offset += heroes.length;
         }
-    }, [id]);
 
-    return {
-        hero
+        if (!cancelled) {
+          setHero(selectedHero ?? null);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar dados do herói:", error);
+
+        if (!cancelled) {
+          setHero(null);
+        }
+      }
     };
+
+    getHeroData();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
+  return { hero };
 }

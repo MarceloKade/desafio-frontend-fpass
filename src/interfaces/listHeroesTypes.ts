@@ -1,7 +1,7 @@
 export interface HeroProps {
-    name: string;
-    thumbnail: {
-      path: string;
-      extension: string;
-    }
-  }
+  name: string;
+  thumbnail: {
+    path: string;
+    extension: string;
+  };
+}
