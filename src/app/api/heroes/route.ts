@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
-import { Hero } from "@/interfaces/heroes";
+import { SuperheroApi } from "@/interfaces/superheroApi";
 
 export const runtime = "nodejs";
 
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const response = await axios.get<Hero[]>(API_URL, {
+    const response = await axios.get<SuperheroApi[]>(API_URL, {
       timeout: 15000,
     });
 
